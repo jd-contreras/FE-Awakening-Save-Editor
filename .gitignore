@@ -1,0 +1,39 @@
+# Build output
+build/
+build-host/
+*.3dsx
+*.cia
+*.elf
+*.smdh
+*.bnr
+
+# Third-party CIA tools (download them, see the READMEs)
+tools/cia/makerom.exe
+tools/cia/bannertool.exe
+*/tools/cia/makerom.exe
+*/tools/cia/bannertool.exe
+
+# Game files and personal data: never commit these
+*.bin
+*.bin.lz
+*.cgfx
+*.bcres
+*.bcwav
+banner_3d/
+banner_work/
+sd_copy/
+backups/
+saves/
+debug.log
+settings.cfg
+Chapter[0-9]
+Global
+Map0
+Map1
+
+# Editors / OS
+__pycache__/
+*.pkl
+.vscode/
+.DS_Store
+Thumbs.db
