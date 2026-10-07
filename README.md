@@ -2,7 +2,6 @@
 
 On-console save editor for Fire Emblem Awakening by Noble Zero. Runs on Luma3DS, as a .3dsx (Homebrew Launcher) or an installed .cia.
 
-Edits: level, stats (as shown in game), class, skills (learned + equipped), supports, inventory, convoy, gold and renown.
 See [docs/SAVE_FORMAT.md](docs/SAVE_FORMAT.md) for the format notes.
 
 ## Download
@@ -30,21 +29,54 @@ Awakening USA. Copy it to `sdmc:/cheats/` and turn codes on from the Rosalina me
 
 The project path must not contain spaces (GNU make limitation).
 
-## Controls
+## Options
 
-| Screen | Controls |
+Everything below can be changed from the console. Pick a game, pick a save slot, then a unit or
+one of the menus. Edits stay in memory until you save (START), and every save is backed up first.
+
+### Units
+
+| Screen | What you can edit |
 |---|---|
-| Slot select | D-pad + A, or tap a slot. START exits |
-| Unit list | D-pad moves (Left/Right page), A stats, L class, R items, X skills, SELECT supports, Y army (gold/renown), START save, B back; Convoy button |
-| Items | Up/Down slot, A change item (picker, X = type filter), X equip, SELECT remove, Left/Right ±1 use, L/R ±10, Y type uses |
-| Convoy | Up/Down item, Left/Right or −/+ one more/less, Y type count, X set all listed, SELECT type filter |
-| Army | Gold and renown (A or tap to type), X convoy |
-| Extras → Avatar | Up/Down field, Left/Right or −/+ change, A type (name, hex hair color, birthday), L/R other logbook units |
-| Stats | Up/Down row, Left/Right ±1, L/R ±5, X max, Y type a value, SELECT class; or tap −/+/Max/Class |
-| Class | Up/Down class, L/R page, A change (preview of new stats on top), B back. All classes allowed |
-| Supports | Up/Down partner, Left/Right or −/+ step through - > C ready > C > B ready > B > A ready > A > S ready > S, Y type points, L/R page |
-| Slot select (X) | Toggle the marriage guard (lowers "S ready" to A for already-married units when a slot opens) |
-| Skills | Up/Down skill, L/R or Left/Right page, A learn/forget, Y equip/unequip, X learn all; or tap a name (learn) / Equip button |
+| **Stats** | Level and all eight stats (HP, Str, Mag, Skl, Spd, Lck, Def, Res), shown the way the game shows them. Step ±1 / ±5, jump to the cap, or type a value. Numbers turn green when raised and red when lowered compared to the save as loaded, with the old value shown. |
+| **Class** | Change to any class, including the other gender's and enemy-only classes (marked with a warning), with a preview of the new stats. |
+| **Skills** | Learn or forget any skill, equip up to five, or learn every skill at once. |
+| **Supports** | Every support partner of the unit: step through C ready, C, B ready, B, A ready, A, S ready and S, or type the points. Several S supports at once are possible (experimental). |
+| **Items** | All five inventory slots: any item (filter by weapon type), uses, equip, remove, and forge the weapon. |
+| **Forge** | Create or edit a forged weapon: name, Might +, Hit +, Crit +. |
+| **More** | Weapon ranks for all six weapon types, boots (Move +), battles and victories, revive a fallen unit, remove the unit (confirmed with a popup). |
+| **Rename** | New name for Avatars, logbook units and imported heroes. |
+| **Look & name** (Avatars) | Name, gender, build, face, hairstyle, hair color (any color, as hex), voice and birthday. Presets include the DLC hero heads (Marth, Roy, ...). |
+| **Parents** (children) | Father and mother, hair color (or the child's default hair), and inheriting the parents' skills. |
+
+### Army
+
+| Screen | What you can edit |
+|---|---|
+| **Army** | Gold (up to 999,999), Renown (up to 99,999), difficulty (Normal, Hard, Lunatic, Lunatic+), mode (Classic or Casual), and making Renown rewards claimable again. |
+| **Barracks** | The events waiting in the Barracks: stat boosts, experience, found items, weapon experience, conversations between two units, birthdays (experimental). |
+| **Convoy** | Any item in any amount: ±1 / ±10, type a number, max (99), or set every listed item at once; filter by weapon type; forge convoy weapons in bulk. |
+| **Army tools** | One button for every player unit: max every stat, learn every skill, max weapon ranks (A), raise supports to the next conversation, heal everyone, revive all fallen units. |
+
+### Extras
+
+| Screen | What you can edit |
+|---|---|
+| **Add a unit** | Add any playable character as a fresh level-1 recruit (children get their parents filled in). **Import an Avatar** brings in Avatars from your other save slots and their StreetPass / SpotPass teams, your logbook, Checkpoint backups, or the list of 138 SpotPass and DLC heroes, optionally with their supports (capped at A). |
+| **Support Log** | Unlock every support conversation and Unit Gallery entry, and the Game Clear flag that shows those menus (shared by all slots). Can be restored from a backup. |
+| **World map** | Each location (chapters and paralogues): locked, open, beaten, Risen battle or merchant; replay a beaten chapter; or set all locations at once. |
+| **Records & time** | Total play time and each chapter's record: turns, time, and the two featured units and their classes. |
+
+### Settings
+
+| Setting | What it does |
+|---|---|
+| **Backup before saving** | On by default: the whole save is copied to the SD card before every write. Toggle on the Backups screen or on the save confirmation. |
+| **Backups** | Restore a backup (the current save is backed up first), delete one, or delete all (Up, Down, Left, Right, B, A). |
+| **Marriage guard** | Lowers "S ready" to A for units who are already married, so watching it doesn't undo a marriage (X on the slot screen). |
+| **Mod data** | Use a romfs mod's characters, classes and items when one is found (SELECT on the slot screen); see Romfs mods below. |
+
+All settings are remembered between launches.
 
 ## Safety
 
