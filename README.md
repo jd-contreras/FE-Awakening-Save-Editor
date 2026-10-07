@@ -1,6 +1,7 @@
 # FE Awakening Save Editor (3DS homebrew)
 
 On-console save editor for Fire Emblem Awakening by Noble Zero. Runs on Luma3DS, as a .3dsx (Homebrew Launcher) or an installed .cia.
+This app can work with modified game saves as well like Thabes Overwritten as long as those files are in your luma folder the app will read the modified stats 
 
 See [docs/SAVE_FORMAT.md](docs/SAVE_FORMAT.md) for the format notes.
 
