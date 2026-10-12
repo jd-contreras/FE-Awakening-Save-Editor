@@ -47,6 +47,10 @@ AccessControlInfo:
    - Shell
    - CategoryHomeMenu
    - SeedDB
+  IORegisterMapping:
+   - 1ff00000-1ff7ffff   # DSP memory
+  MemoryMapping:
+   - 1f000000-1f5fffff:r # VRAM (read when the system keyboard captures the screen)
   IoAccessControl:
   MemoryType                    : Application
   SystemMode                    : 64MB

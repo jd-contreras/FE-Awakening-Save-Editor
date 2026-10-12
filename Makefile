@@ -33,7 +33,7 @@ INCLUDES	:=	include
 APP_TITLE		:=	Awakening Save Editor
 APP_DESCRIPTION	:=	Fire Emblem Awakening save editor
 APP_AUTHOR		:=	Noble Zero
-APP_VERSION		:=	0.1.0
+APP_VERSION		:=	0.1.1
 
 #---------------------------------------------------------------------------------
 # options for code generation
